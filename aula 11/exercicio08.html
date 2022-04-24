@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+<input placeholder="Filhos menores de 10 anos" id="ipt_filhosMenores">
+
+<br>
+<input placeholder="Filhos a partir de 10 anos" id="ipt_filhosMaiores">
+
+<button onclick="valores()">Calcular</button>
+
+<span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    function valores(){
+
+        var menores = Number(ipt_filhosMenores.value);
+        var calMenor = menores * 30;
+
+        var maiores = Number(ipt_filhosMaiores.value);
+        var calMaior =  maiores * 20;
+
+        var auxilio = calMaior + calMenor;
+
+spantxt.innerHTML = `<span style="color:blue">Você tem</span> ${ipt_filhosMenores.value}
+ <span style="color:blue"> filhos menores de 10 anos e </span>${ipt_filhosMaiores.value}
+ <span style="color:blue">filhos a partir de 10 anos, logo, seu "Auxílio Filhos" será de </span> R$${auxilio.toFixed(2)}
+`;
+
+
+    }
+
+</script>

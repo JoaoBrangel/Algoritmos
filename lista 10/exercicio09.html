@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L10_E09</title>
+</head>
+
+<body>
+    <h2>Análise de alimentos</h2>
+    Selecione o tipo de alimento:
+    <select id="sel_alimento">
+        <option value="CB">Carne bovina</option>
+        <option value="S">Soja</option>
+        <option value="CS">Carne suína</option>
+        <option value="L">Legumes</option>
+        <option value="CP">Carne de peixe</option>
+        <option value="F">Frutas</option>
+        <option value="O">Ovos</option>
+    </select>
+    <br><br>
+    <button onclick="clicar()">Tipo de alimentação</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+
+    function clicar() {
+        var jl_alimentos = sel_alimento.value;
+
+        if (jl_alimentos == 'CB' || jl_alimentos == 'CS' || jl_alimentos == 'CP' || jl_alimentos == 'O') {
+            div_msg.innerHTML = `Você não pode ser Vegano`
+
+            if (jl_alimentos == 'S' || jl_alimentos == 'L' || jl_alimentos == 'F') {
+                div_msg.innerHTML == `Você pode ser Vegano`
+                
+
+            } else if (jl_alimentos == 'O') {
+                div_msg.innerHTML = `Você pode ser Vegano<br>`
+                div_msg.innerHTML += `Você pode ser Vegetariano`
+            }
+        }
+taiza.marque@sptech.school
+    }
+
+</script>

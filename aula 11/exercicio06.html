@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calcule sua presença</h3>
+    
+
+    <input placeholder="Nome do ALuno" id="nomeAluno">
+    <br><br>
+    <input placeholder="Total de aulas dadas" id="totalAulas">
+    <br><br>
+    <input placeholder="Total de faltas do aluno" id="faltasAluno">
+    <br><br>
+
+    <button style="width: 177px;" onclick="bt_frequencia()">frequencia</button>
+    <br>
+    <span id="Spantxt"></span>
+
+    <div id="cor" style="background-color: red; width: 0%; height:20px ;" ><span></span></div>
+        
+</body>
+</html>
+<script>
+
+    function bt_frequencia(){
+
+    
+        var aulas = Number (totalAulas.value);
+        var faltas = Number (faltasAluno.value);
+        var frequencia = 100 * (1 - (faltas/aulas))
+
+            Spantxt.innerHTML = `<span style="color:blue;">O </span>  ${nomeAluno.value}<span style="color:blue;"> , 
+            tem sua frequencia de</span> ${frequencia.toFixed(1)} %`
+
+            cor.style.width = frequencia + '%'; 
+
+    }
+
+</script>

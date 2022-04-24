@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Dinheiro</title>
+</head>
+
+    <body>
+       
+
+        <h1>Como estarei no futuro?</h1>
+
+                        
+        avaliação continuada
+                <br>
+                <input style="width: 250px;"; id="ipt_continuada" type="text"; placeholder="Nota continuada">
+                <br><br>
+
+        avaliação semestral
+                <br>
+                <input style="width: 250px;"; id="ipt_semestral" type="text"; placeholder="Nota semestral";>
+                <br><br>
+        Digite seu nome    
+                <br>  
+                <input style="width: 250px;"; id="ipt_nome" type="text"; placeholder="Nome";>
+                <br><br>
+       
+                <button style="border-radius: 5px; width: 260px;" onclick="media();">média final </button>
+                <br><br>
+            
+                
+                             <br>           
+
+            <span id="spanText"></span>
+
+           
+        </div>
+
+    
+                <br>
+        
+    </body>
+</html>
+
+<script>
+    
+
+function media(){ 
+    spanText.innerHTML =` A média de  ${ipt_nome.value}, será de ${(ipt_continuada.value * 0.4 + ipt_semestral.value * 0.6)}`;
+}
+
+
+
+
+</script>   

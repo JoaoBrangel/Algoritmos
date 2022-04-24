@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select style="border-radius: 5px;" id="slt_deposito">
+        <option value="0.05">5 CENTAVOS</option>
+        <option value="0.10">10 CENTAVOS</option>
+        <option value="0.25">25 CENTAVOS</option>
+        <option value="0.50">50 CENTAVOS</option>
+        <option value="1">1 REAL</option>
+    </select>
+
+    <button onclick="depositar()">depositar</button>
+    <button onclick="bt_retirar()">retirar</button>
+
+    <br>
+    <div id="span_saldo">saldo:</div>
+    <br>
+    <span id="span_contador">contador</span>
+    <br>
+    <span id="span_media">media:</span>
+</body>
+</html>
+<script>
+    var jl_valor;
+    var jl_contador;
+    
+
+    function depositar(){
+        jl_contador++;
+        jl_valor = jl_valor + Number (slt_deposito.value);
+
+        var media = (jl_valor / jl_contador);
+
+        span_saldo.innerHTML =  `saldo ${jl_valor.toFixed(2)}`
+        span_contador.innerHTML = `contador ${jl_contador}`
+        span_media.innerHTML = `media ${media.tofixed(2)}`
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>salário bruto</title>
+</head>
+
+    <body>
+       
+
+        <h1>do salário bruto do usuário</h1>
+
+                        
+        salário bruto
+                <br>
+                <input style="width: 250px;"; id="ipt_salario" type="text"; placeholder="salário bruto">
+                <br><br>
+       
+                <button style="border-radius: 5px; width: 260px;" onclick="media();">média final </button>
+                <br><br>
+            
+                
+                             <br>           
+
+            <span id="spanText"></span>
+
+           
+        </div>
+
+    
+                <br>
+        
+    </body>
+</html>
+
+<script>
+    
+
+function media(){ 
+    spanText.innerHTML =` <span style="color: blue">Apesar de seu bruto ser <b style="color: green">R$ 
+        ${ipt_salario.value}</b>, após os descontos, você receberá somente <b style="color: brown">R$ 
+            ${ipt_salario.value*(1-0.1-0.2-1/30)}</b>.</span>
+        ${ipt_salario.value} `
+        }
+
+
+
+
+</script>   

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>salário bruto</title>
+</head>
+
+    <body>
+       
+        <h1>do salário bruto do usuário</h1>
+                        
+        Digite seu salário bruto:
+                
+                <input style="width: 210px;"; id="ipt_salario" type="text"; placeholder="salário bruto">
+                <br><br>
+       
+                <button style="border-radius: 5px; width: 376px; background-color: yellow;" onclick="media();">média final </button>
+                <br><br> 
+
+                <br>           
+                
+                <span id="spanText"></span>
+
+                <br>
+        
+    </body>
+</html>
+
+<script>
+
+function media()
+{ 
+    var salBruto = Number (ipt_salario.value) // trocando o nome dp id para variavel
+    var salDesc = salBruto*(1-0.1-0.2-1/30) // calculo
+
+    spanText.innerHTML = `Apesar de seu bruto ser <b style="color: green">R$${salBruto}</b>, após os escontos, você receberá somente <b style="color: red">R$
+    ${salDesc.toFixed(2)}</b>`; // apresentando o valor 
+ }
+</script>   

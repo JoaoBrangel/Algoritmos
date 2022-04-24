@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ba</title>
+</head>
+<body>
+    <h3>Feira do Rolo</h3>
+    <select id="ipt_especie" onchange="on_especie()">
+        <option value="0">- Escolha uma espécie -</option>
+        <option value="1">Oviperos</option>
+        <option value="2">Mamiferos</option>
+    </select>
+<div id="tudo">
+
+    <select id="ipt_oviperos" style="display: none;" onchange="on_oviperos()">
+        <option value="0">- Escolha um Ovíparo -</option>
+        <option value="1">Galinha</option>
+        <option value="2">Peixe</option>
+        <option value="3">Tartaruga</option>
+    </select>
+
+    
+
+    <select id="ipt_mamiferos" style="display: none;" onchange="on_mamiferos()">
+        <option value="0">- Escolha um Mamífero -</option>
+        <option value="1">Elefante</option>
+        <option value="2">Porco</option>
+        <option value="3">Coelho</option>
+    </select>
+
+    <img id="spanimg" src="" style="height: 150px;">
+
+</div><!--tudo-->
+
+
+
+
+
+</body>
+</html>
+<script>
+
+function on_especie(){
+var jl_especie = Number(ipt_especie.value)
+    if (jl_especie == 0) {
+        
+        tudo.style.display ="none"
+
+    } else {
+        if (jl_especie == 1) {
+            tudo.style.display ="block"
+            ipt_oviperos.style.display ="block"
+            ipt_mamiferos.style.display ="none"
+            
+        } else {
+            tudo.style.display ="block"
+            ipt_mamiferos.style.display ="block"
+            ipt_oviperos.style.display ="none"
+            
+        }
+    }
+    
+}
+
+function on_oviperos(){
+
+    var jl_oviperos = Number(ipt_oviperos.value)
+    if (jl_oviperos == 0) {
+        
+        tudo.style.display ="none"
+    } else {
+        if (jl_oviperos == 1) {
+            
+            spanimg.src ="https://i.pinimg.com/550x/33/4d/42/334d425ebe7b8134d7c83170522b7816.jpg"
+        } else {
+            if (jl_oviperos == 2) {
+                
+                spanimg.src ="https://c.tenor.com/9mz3ULswklsAAAAC/nemo.gif"
+            } else {
+                
+                spanimg.src ="https://www.imagensanimadas.com/data/media/289/tartaruga-imagem-animada-0170.gif"
+            }
+            
+        }
+    }
+    
+}
+
+function on_mamiferos(){
+    
+    var jl_mamiferos = Number(ipt_mamiferos.value)
+    if (jl_mamiferos == 0) {
+        
+    } else {
+        if (jl_mamiferos == 1) {
+            
+            spanimg.src ="https://www.petz.com.br/blog/wp-content/uploads/2022/03/quanto-pesa-um-elefante-1280x720.jpg"
+        } else {
+            if (jl_mamiferos == 2) {
+                
+                spanimg.src ="https://img.r7.com/images/porco-desaparicao-corpo-24022021174926376?dimensions=771x420&no_crop=true"
+            } else {
+                
+                spanimg.src ="https://static.escolakids.uol.com.br/2021/11/coelho.jpg"
+            }
+            
+        }
+    }
+    
+}
+
+</script>

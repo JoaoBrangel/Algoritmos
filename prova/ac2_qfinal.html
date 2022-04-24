@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto</title>
+</head>
+
+<body>
+    <h2>Posto Estrela - Controle de Vendas</h2>
+
+    <div id="div_abertura" style="display: block;">
+        <h3>------------------Abertura do Posto------------------</h3>
+        Entre com o volume de Etanol do tanque:
+        <input id="ipt_etanol"> <br>
+        Entre com o volume de Gasolina do tanque:
+        <input id="ipt_gasolina"> <br>
+        <button onclick="abrir()">Abrir o Posto</button> <br>
+        <div id="div_msg_abertura"></div>
+    </div>
+
+    <div id="div_venda" style="display: none;">
+        <h3>-------Registro das Operações de venda do turno--------</h3>
+        Entre com o volume vendido:
+        <input id="ipt_venda">
+        Informe o produto vendido:
+        <select id="sel_produto">
+            <option value="s">--Selecione--</option>
+            <option value="e">etanol</option>
+            <option value="g">gasolina</option>
+        </select>
+        <button onclick="registrar()">Registrar a Venda</button>
+        <button onclick="encerrar()" style="background-color: red;">Encerrar o Turno</button>
+        <br><br>
+        <span id="span_msg"></span>
+    </div>
+</body>
+
+</html>
+<script>
+
+         var jl_etanol  = 0
+         var jl_gasolina = 0
+    function abrir() {
+        
+        jl_etanol = Number(ipt_etanol.value)
+        jl_gasolina = Number(ipt_gasolina.value)
+
+        if (jl_etanol < 300) {
+            div_msg_abertura.innerHTML += `<br>ERRO - Com esse volume de Etanol não dá para abrir o posto`;
+        } else if (jl_etanol >= 300 && jl_etanol <= 3000) {
+            div_msg_abertura.innerHTML += `<br>AVISO - Chame o reabastecimento de Etanol`;
+        }
+
+        if (jl_gasolina < 200) {
+            div_msg_abertura.innerHTML += `<br>ERRO - Com esse volume de Gasolina não dá para abrir o posto`;
+        } else if (jl_gasolina >= 200 && jl_gasolina <= 2000) {
+            div_msg_abertura.innerHTML += `<br>AVISO - Chame o reabastecimento de Gasolina`;
+        } else if (jl_etanol > 3000 || jl_gasolina > 2000) {
+
+            div_abertura.style.display = "none"
+            div_venda.style.display = "block"
+        }
+    }
+
+    
+
+
+function registrar(){
+        var jl_venda = Number(ipt_venda.value);
+        var jl_produto = sel_produto.value
+
+        jl_etanol = Number(ipt_etanol.value)
+        jl_gasolina = Number(ipt_gasolina.value)
+
+
+        if (jl_produto == 's') {
+            alert ("Escolha o tipo de combustível")
+        } else if( jl_produto == 'e' ) {
+            var resultado = Number(jl_venda - jl_etanol);
+            
+            span_msg.innerHTML += `“Com a venda de ${jl_venda} de etanol o saldo no tanque é ${resultado} de , onde:`
+            span_msg.innerHTML += `<br><br>${jl_venda} é a quantidade de etanol vendido`
+            span_msg.innerHTML += `<br>Etanol é o produto que foi vendido`
+            span_msg.innerHTML += `<br> ${resultado} é o saldo do produto, ou seja, é a quantidade do item 1 menos a quantidade vendida`
+        }else{
+            var resultado = Number(jl_venda - jl_etanol);
+            
+            span_msg.innerHTML += `“Com a venda de ${jl_venda} de etanol o saldo no tanque é ${resultado} de , onde:`
+            span_msg.innerHTML += `<br><br>${jl_venda} é a quantidade de etanol vendido`
+            span_msg.innerHTML += `<br>Gasolina é o produto que foi vendido`
+            span_msg.innerHTML += `<br> ${resultado} é o saldo do produto, ou seja, é a quantidade do item 1 menos a quantidade vendida`
+        }
+}
+
+</script>

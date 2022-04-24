@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Script</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>Farol</h1>
+
+            <div style="background-color:dimgrey; width: 25%; height: 500px; border-radius: 20px;
+            text-shadow: 5px 5px 5px rbga(10,10,10,10.5); 
+            box-shadow: 5px 5px 5px rgba(6,10,10,10.5);">
+                <br>
+            
+                <button style="background-color: red; width: 50%; height: 30%; border-radius: 20px;" onclick="vermehlo();"></button>
+                    <br>
+
+                    <button style="background-color: yellow; width: 50%; height: 30%; border-radius: 20px" onclick="amarelo();"></button>
+                        <br>
+                
+                        <button style="background-color: green; width: 50%; height: 30%; border-radius: 20px" onclick="verde();"></button>
+            
+            </div>
+
+            <span id="spanText"></span>
+                <br>
+        </Center>
+    </body>
+</html>
+
+<script>
+    
+
+function vermehlo(){ 
+    spanText.innerHTML = '<br><b>Pare</b></span>';
+}
+function amarelo(){ 
+    spanText.innerHTML = '<br><b>Atenção</b>';
+}
+function verde(){ 
+    spanText.innerHTML = '<br><b>Prossiga</b>';
+}
+
+
+
+</script>   

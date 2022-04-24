@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Shows</title>
+</head>
+<body>
+    <center>
+
+        <h3>Tipos de entreterimento</h3>
+    <select id="shows">
+        <option value="Assistir a filme Marley & Eu">Cinema</option>
+        <option value="Assistir a peça  O Fantasma da Ópera">Teatro</option>
+        <option value="Ir ao parque Hopi Hari">Parque</option>
+        <option value="Ouvir o show da Lady Gaga">Show</option>
+    </select>
+
+    <button onclick="bt_atracao()">Ver atração</button>
+
+</center>
+</body>
+</html>
+<script>
+    var tipos = shows.value
+    function bt_atracao(){
+        alert (`Assistir a filme ${tipos}`)
+
+    }
+
+
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Tabuada</title>
+</head>
+<body>
+<center>
+    <h3>Digite sua tabuada</h3>
+
+    
+    <select id="slt_valor" onchange="tabuada()">
+        <option value="">Tabuada</option>
+        <option value="1">Tabuada do 1</option>
+        <option value="2">Tabuada do 2</option>
+        <option value="3">Tabuada do 3</option>
+        <option value="4">Tabuada do 4</option>
+        <option value="5">Tabuada do 5</option>
+        <option value="6">Tabuada do 6</option>
+        <option value="7">Tabuada do 7</option>
+        <option value="8">Tabuada do 8</option>
+        <option value="9">Tabuada do 9</option>
+    
+    </select>
+    
+    <br><br>
+
+    <span id="conta"></span>
+
+</center>
+</body>
+</html>
+<script>
+
+
+    function tabuada(){
+    
+    var valor = Number(slt_valor.value);
+    var valor1 = valor * 1;
+    var valor2 = valor * 2;
+    var valor3 = valor * 3;
+    var valor4 = valor * 4;
+    var valor5 = valor * 5;
+    var valor6 = valor * 6;
+    var valor7 = valor * 7;
+    var valor8 = valor * 8;
+    var valor9 = valor * 9;
+
+
+    conta.innerHTML = `o usuário digitou ${valor}, sua tabuada é:<br>  ${valor} x 1 = ${valor1}<br>
+                                                                       ${valor} x 2 = ${valor2}<br> 
+                                                                       ${valor} x 3 = ${valor3}<br>
+                                                                       ${valor} x 4 = ${valor4}<br>
+                                                                       ${valor} x 5 = ${valor5}<br> 
+                                                                       ${valor} x 6 = ${valor6}<br>
+                                                                       ${valor} x 7 = ${valor7}<br> 
+                                                                       ${valor} x 8 = ${valor8}<br>
+                                                                       ${valor} x 9 = ${valor9}<br>`
+    }
+
+
+</script>

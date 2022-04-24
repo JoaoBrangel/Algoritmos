@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Center><h3>saldo na conta do banco</h3>
+    <input id="ipt_saldo">
+
+    <button onclick="bt_verificar()">Verificar finanças</button>
+
+    <span id="resultado"></span>
+</Center>
+</body>
+</html>
+<script>
+    var jl_saldo = 0
+
+    function  bt_verificar(){
+        var jl_saldo = Number (ipt_saldo.value)
+        if (jl_saldo ==0) {
+            resultado.innerHTML =(`Conta zerada`);
+        }
+        
+        if (jl_saldo < 0) {
+            resultado.innerHTML =(`Está devendo!`);
+        }
+        
+        if (jl_saldo > 0){
+            resultado.innerHTML =(`<span style="color:blue;">Saldo positivo</span>`);
+        }
+    }
+
+</script>

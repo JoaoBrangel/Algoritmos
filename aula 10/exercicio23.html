@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Votos</title>
+</head>
+<body>
+    
+    <span id="dinheiro"></span>
+    <span id="deposito"></span>
+
+<button onclick="bt_praca()"><img style="width: 150px;" src="logo.jpg"></button>
+<span id="spanhtml"></span>
+<button onclick="bt_zorra()"><img style="width: 150px;" src="logo.jpg"></img></button>
+
+<br>
+<span id="spanhtml2"></span>
+<span id="spanhtml3"></span>
+</body>
+</html>
+<script>
+
+var Praca = 0;
+var zorra = 0;
+var total = 0;
+spanhtml.innerHTML = `<br>Cantor 1 ${Praca.toFixed(0)}<br>`
+spanhtml2.innerHTML = `Cantor 2 ${Praca.toFixed(0)}`
+spanhtml3.innerHTML =`<br><h3>total de votos ${total}</h3>`
+    function bt_praca(){
+        Praca = Praca + 1;
+    total ++;
+        spanhtml.innerHTML =`<br>(Cantor 1) ${Praca} <br>` ;
+        spanhtml3.innerHTML =`<br><h3>total de votos ${total}</h3> <br>`
+    }
+    function bt_zorra(){
+        Praca = Praca + 1;
+        zorra ++;
+        total ++;
+        spanhtml2.innerHTML =`(Cantor 2) ${zorra}`
+        spanhtml3.innerHTML =`<br><h3>total de votos ${total} </h3><br>`
+    }
+
+
+</script>

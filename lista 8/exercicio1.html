@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio-1 lista 8</title>
+</head>
+<body>
+    <h3>Esportes</h3>
+    
+    <input id="ipt_altura" placeholder=" Digite sua altura">
+
+    <button onclick="bt_esporte()">Resultado</button>
+</body>
+</html>
+<script>
+
+function bt_esporte(){
+    var jl_altura = Number(ipt_altura.value);
+
+    if (jl_altura <=  1.65) {
+        alert (`Você pode ser piloto de corrida `)
+    } else if (jl_altura >1.65  && jl_altura <= 1.80) {
+            alert (`Você pode ser jogador de futebol `)
+        } else if (jl_altura < 1.80) {
+            alert (`Você pode ser jogador de futebol `)
+            }else {
+    alert (`Você pode ser jogador de vôlei ou basquete `)
+        }
+        
+    
+
+}
+//
+</script>

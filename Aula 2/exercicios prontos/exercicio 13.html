@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Script</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>Brasil x Alemanha</h1>
+
+            <div style="background-color:dimgrey; width:58%; height: 400px; border-radius: 20px;">
+                <br>
+                        
+                <button style="border-radius: 5px; width: 260px;float: left;" onclick="Brasil();">Gol do Brasil</button>
+
+                    <button style="border-radius: 5px; width: 260px;float: left;" onclick="Alemanha();">Gol da Alemanha</button>
+                    
+                    <button style="border-radius: 5px; width: 260px;float: left;" onclick="apagar();">Limpar</button>
+                    <br>
+            
+                    <b style="border-right: 50%;">Tempo real do jogo: 46:01</b>
+                
+                             <br>           
+
+            <span id="spanText"></span>
+        </div>
+                <br>
+        </Center>
+    </body>
+</html>
+
+<script>
+    
+
+function Brasil(){ 
+    spanText.innerHTML += '<br>  <b Style=" color:#009c3b"> É goooolll do Brasil!!! </b> </span>';
+}
+
+function Alemanha(){ 
+    spanText.innerHTML += '<br>  <b Style="background-color:red; color:#ffdf00">É goooolll da Alemanha!!! </b> </span>';
+}
+
+function Tempo(){ 
+    spanText.innerHTML += '<br>  <b Style="background-color:black; color:yellow">Boas vinda ao site </b> </span>';
+}
+function apagar(){ 
+    spanText.innerHTML =''
+}
+
+</script>   

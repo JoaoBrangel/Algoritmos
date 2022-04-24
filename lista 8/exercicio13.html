@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio13</title>
+</head>
+
+<body>
+    <h3>Cofrinho</h3>
+
+
+    <button onclick="bt_cincao()">Guardar R$5,00</button>
+    <button onclick="bt_dez()">Guardar R$10,00</button>
+    <button onclick="bt_desconto()">tirar 10</button>
+    <button onclick="bt_desconto1()">tirar 5</button>
+    <br>
+    <span id="spantxt"></span>
+    <br>
+    <span id="spantxt2"></span>
+</body>
+
+</html>
+<script>
+
+    var jl_cinco = 0;
+    var jl_dez = 0;
+
+
+
+    function bt_cincao() {
+        jl_cinco = Number(jl_cinco) + 5
+
+        spantxt.innerHTML = `Valor guardado: R$ ${jl_cinco}`
+
+        mostar();
+    }
+
+    function bt_dez() {
+        jl_cinco = Number(jl_cinco) + 10
+
+        spantxt.innerHTML = `Valor guardado: R$ ${jl_cinco}`
+
+        mostar();
+    }
+
+    function bt_desconto() {
+        jl_cinco = Number(jl_cinco) - 10
+
+        spantxt.innerHTML = `Valor guardado: R$ ${jl_cinco}`
+
+        mostar();
+    }
+    function bt_desconto1() {
+        jl_cinco = Number(jl_cinco) - 5
+
+        spantxt.innerHTML = `Valor guardado: R$ ${jl_cinco}`
+
+        mostar();
+    }
+
+    function mostar() {
+      
+        if (jl_cinco >= 100) {
+            spantxt2.innerHTML = `#ostentação`
+        } else if (jl_cinco >= 0) {
+            spantxt2.innerHTML = `Finanças OK!`
+        } else if (jl_cinco < 0 && jl_cinco > -20) {
+            spantxt2.innerHTML = `Finanças em perigo!`
+        } else {
+            spantxt2.innerHTML = `Quase um Corinthians!`
+        }
+    }
+
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Salario</title>
+</head>
+<body>
+    
+    <input id="ipt_salario" placeholder="Salario">
+    <button onclick="bt_salario()">salario</button>
+    <span id="spantxt"></span>
+    <br>    
+   
+    <br>
+    <button onclick="cem()">Pagar conta de 100</button>
+    
+    <button onclick="quinhentos()">Pagar conta de 500</button>
+    <button onclick="loteria()">Ganhar 2000 na loteria</button>
+</body>
+</html>
+<script>
+
+    
+       var salario = 0
+       spantxt.innerHTML = `Grana atual R$${ipt_salario.value}`
+
+    function bt_salario(){
+            spantxt.innerHTML = `Grana atual R$${ipt_salario.value}`;
+    }
+
+
+    function cem(){
+        
+        salario = salario - 100
+        spantxt.innerHTML = `Grana atual R$${salario.toFixed(2)}`;
+
+    };
+    function quinhentos(){
+        salario = salario - 500;
+       
+        spantxt.innerHTML = `Grana atual R$${salario.toFixed(2)}`;
+
+    };
+    function loteria(){
+        salario = salario + 2000;
+       
+        spantxt.innerHTML = `Grana atual R$${salario.toFixed(2)}`;
+
+    };
+    
+</script>

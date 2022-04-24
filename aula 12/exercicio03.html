@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>historia</title>
+</head>
+<body>
+    <CENTER>
+        <h3>Conte uma historia</h3>
+    <select id="bt_dia">
+        <option value="Uma vez...">Tema 1</option>
+        <option value="Num belo dia...">Tema 2</option>
+        <option value="Numa noite chuvosa...">Tema 3</option>
+    </select>
+    <select id="bt_conto">
+        <option value="Um peixe morreu afogado">Conto 1</option>
+        <option value="Um gato tomou banho">Conto 2</option>
+        <option value="Um corvo se curvou  ">Conto 3</option>
+    </select>
+
+    <button onclick="juntar()">Contar a historia</button>
+</CENTER>
+</body>
+</html>
+<script>
+
+    function juntar(){
+
+        alert (`${bt_dia.value + bt_conto.value}`);
+
+    }
+
+</script>

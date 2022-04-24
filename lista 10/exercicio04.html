@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio04</title>
+</head>
+
+<body>
+    <h3>parcela?</h3>
+
+    <select id="sl_pagamento">
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de débito</option>
+        <option value="3">Cartão de crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+    <button onclick="bt_analisar()">Analisar compra</button>
+    <br>
+    <span id="spantxt"></span>
+</body>
+
+</html>
+<script>
+    function bt_analisar() {
+
+        var jl_pagamento = sl_pagamento.value;
+
+        if (jl_pagamento == '1' || jl_pagamento == '2') {
+            spantxt.innerHTML = `Você terá que pagar a vista`;
+        } else {
+            spantxt.innerHTML = `Pagamento poderá ser parcelado`;
+        }
+    }
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Mercadinho do joão</h3>
+
+    <input id="ipt_compra" placeholder="Quantos chocolate você ira comprar?">
+
+    <button onclick="bt_comprar()">Comprar</button>
+    <span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    function bt_comprar(){
+        var jl_compra = Number (ipt_compra.value);
+        var jl_conta = jl_compra * 3.00
+        var jl_conta1 = jl_compra * 2.50
+
+        
+
+        if (jl_compra <= 12 ) {
+            spantxt.innerHTML = `O valor de sua compra é de R$${jl_conta.toFixed(2)}`
+
+        }else{
+            if (jl_compra > 12) {
+                spantxt.innerHTML = `O valor de sua compra é de R$${jl_conta1.toFixed(2)}`
+            }
+        } 
+
+    }
+
+
+</script>

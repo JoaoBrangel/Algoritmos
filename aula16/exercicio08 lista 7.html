@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title> exercicio 08 lista 7 </title>
+</head>
+
+<body>
+    <center>
+
+        <h3> Quantas pessoas estão no elevador? </h3>
+        <br>
+        <input id="ipt_homem" placeholder="Quantidade homens">
+        <br><br>
+        <input id="ipt_mulher" placeholder="Quantidade mulheres">
+        <br><br>
+
+        <button onclick="calculo()"> LIGAR O ELEVADOR! </button>
+        <br><br>
+
+        <span id="spantxt"></span>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+
+        var jl_homem = Number(ipt_homem.value * 90);
+        var jl_mulher = Number(ipt_mulher.value * 70);
+        var jl_total = jl_homem + jl_mulher
+        var jl_total2 = Number(jl_homem + jl_mulher - 500);
+
+        if (jl_total <= 500) {
+            spantxt.innerHTML = `O elevador vai se mover, pois está com ${jl_total} Kg.`
+        }
+
+        else {
+            spantxt.innerHTML = ` <b style="color: red;"> Alguém precisa descer. Precisa perder ${jl_total2} Kg para mover o elevador </b>`
+
+
+
+        }
+    }
+</script>

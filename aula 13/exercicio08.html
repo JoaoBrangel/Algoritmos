@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hobby </title>
+</head>
+<body>
+    <center>
+
+        <div style="background-color: yellow; height: 400px; width: 300px; border-radius: 10px; ">
+        <h2>Avalie nosso programa</h2>
+
+<!-- selects --------------------------------------------------->
+    <select  style="border-radius: 7px;" id="slt_avaliacao" >
+
+    <option value="1">1</option>
+    <option value="2">2 </option>
+    <option value="3">3 </option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+
+    </select>
+<!-- selects --------------------------------------------------->
+
+    <button  style="width: 120px;border-radius: 7px; background-color: green; color: white;" onclick="Avaliar()">Avaliar</button>
+<br><br>
+<div id="avaliacao"></div>
+<div id="contagem"></div>
+
+</div> 
+</center>
+</body>
+</html>
+<script>
+var pt_avaliacao = 0;
+var pt_contagem = 0; 
+
+
+function Avaliar(){
+    pt_avaliacao = pt_avaliacao + Number (slt_avaliacao.value);
+    pt_contagem = pt_contagem + 1;
+    var pt_media = pt_avaliacao / pt_contagem;
+
+
+    avaliacao.innerHTML = `Média atual:  <b>${pt_media.toFixed(2)}</b>`;
+    contagem.innerHTML = `Número de avaliações: <b>${pt_contagem}</b>`;
+
+}
+
+    var ax_saldo = 0;
+    var ax_contador = 0;
+
+    function depositar() {
+        ax_contador++;
+        ax_saldo = ax_saldo + Number(select_deposito.value);
+        var media = (ax_saldo / ax_contador)
+
+        span_saldo.innerHTML = `O SALDO DO COFRINHO É DE: ${ax_saldo.toFixed(2)}`
+        span_contador.innerHTML = `A QUANTIDADE DE OPERAÇÕES: ${ax_contador}`
+        span_media.innerHTML = `MEDIA DOS DEPOSITOS:${media}`
+
+        function gastar() {
+            var media = 0;
+            var contador = 0;
+            var saldo = 0;
+span_saldo.innerHTML = `O SALDO DO COFRINHO É DE: ${saldo}`
+            span_contador.innerHTML = `A QUANTIDADE DE OPERAÇÕES: ${contador}`
+            span_media.innerHTML = `MEDIA DOS DEPOSITOS:${media}`
+            }
+
+
+    }
+
+</script>

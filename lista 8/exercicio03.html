@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>exercicio-3 lista 8</title>
+</head>
+<body>
+    <h3> Temperatura ideal</h3>
+
+    <input id="ipt_temperatura" placeholder="Fale sua temperatura ideal">
+
+    <button onclick="bt_ideal()">Situação</button>
+    <span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    var jl_temperatura = 0;
+
+ function bt_ideal(){
+    jl_temperatura = Number(ipt_temperatura.value)
+
+    if (jl_temperatura < 14 ) {
+        spantxt.innerHTML = `Congelante`
+    } else if (jl_temperatura < 21) {
+            spantxt.innerHTML =`Com frio`
+        } else if (jl_temperatura < 24) {
+                spantxt.innerHTML = `confortavel` 
+            } else  if (jl_temperatura < 31) {
+                    spantxt.innerHTML = `Com Calor `
+                } else {
+                    spantxt.innerHTML = `Calor escaldante `
+                }
+ }
+</script>

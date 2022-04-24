@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="slt_img" onchange="slt_imagens()">
+        <option value="https://p4.wallpaperbetter.com/wallpaper/307/555/701/autumn-4k-fall-foliage-wallpaper-preview.jpg">Outono</option>
+        <option value="https://static.preparaenem.com/2021/06/1-foto-de-uma-paisagem-com-arvores-casas-e-montanhas-cobertas-por-neve.jpg">Inverno</option>
+        <option value="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">Primavera</option>
+        <option value="http://i.mlcdn.com.br/portaldalu/fotosconteudo/12123.jpg">Verão</option>
+
+        <img id="img_vapo"></img>
+        <span id="span"></span>
+    </select>
+   
+</body>
+</html>
+<script>
+
+function slt_imagens(){
+    var imagens = slt_imagens.value;
+    span.innerHTML = `${imagens}`;
+}
+
+</script>

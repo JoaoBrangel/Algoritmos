@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio05</title>
+</head>
+<body>
+    <Center>
+    <h3>calcular conta de luz</h3>
+
+    <input id="ipt_consumo">
+
+    <button onclick="bt_calcular()">calcular conta de luz</button>
+</Center>
+</body>
+</html>
+<script>
+
+var jl_dias = 30;
+var jl_consumo = 0;
+function bt_calcular(){
+    
+    jl_consumo = Number(ipt_consumo.value) * 0.85 ;
+    jl_calculo = jl_consumo * jl_dias
+    var jl_desconto = jl_calculo - (jl_calculo * 0.1)
+    
+
+        if (jl_calculo < 100) {
+            alert (`Valor a ser pago com desconto $${jl_desconto.toFixed(2)}`)
+        }if (jl_calculo > 100) {
+            alert (`Valor a ser pago  $${jl_calculo.tofixed(2)}`)
+            
+        }
+    
+}
+
+</script>

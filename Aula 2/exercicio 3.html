@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Script</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>Brasil x Alemanha</h1>
+
+            <div style="background-color:dimgrey; width: 25%; height: 500px; border-radius: 20px;
+            text-shadow: 5px 5px 5px rbga(10,10,10,10.5); 
+            box-shadow: 5px 5px 5px rgba(6,10,10,10.5);">
+                <br>
+                <div style="overflow: auto;">
+                <button style="border-radius: 10px; width: 200px;" onclick="Argentina();">Gol da argentina</button>
+                    <br>
+
+                    <button style="border-radius: 10px; width: 200px;" onclick="Brasil();">Gol do Brasil</button>
+                    <br>
+                    
+                    <button style="border-radius: 10px; width: 200px;" onclick="Tempo();">Tempo real do jogo</button>
+                    
+                    <br>
+                    <span id="spanText"></span>
+                </div>
+            </div>
+
+                <br>
+        </Center>
+    </body>
+</html>
+
+<script>
+    
+
+function Argentina(){ 
+    spanText.innerHTML += '<br><b style='background-color'>7</b></span>';
+}
+function Brasil(){ 
+    spanText.innerHTML += '<br><b>1</b>';
+}
+function Tempo(){ 
+    spanText.innerHTML += '<br><b>22 minutos do 1 tempo</b>';
+}
+
+
+
+</script>   
