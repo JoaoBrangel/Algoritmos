@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Dinheiro</title>
+</head>
+
+    <body>
+       
+
+        <h1>Como estarei no futuro?</h1>
+
+            <div>
+
+              <img style="width:260px;" src="http://mundocarreira.com.br/wp-content/uploads/2015/09/sem-dinheiro.jpg">
+                <br>
+                        
+                Quanto dinheiro terá em 6 meses
+                <br>
+                <input style="width: 250px;"; id="ipt_6meses" type="text"; placeholder="Money">
+                <br><br>
+
+                Quanto dinheiro terá em 3 anos
+                <br>
+                <input style="width: 250px;"; id="ipt_3anos" type="text"; placeholder="Money";>
+                <br><br>
+
+
+                <button style="border-radius: 5px; width: 260px;" onclick="nadando();">Como estarei no futuro?</button>
+                <br><br>
+            
+                
+                             <br>           
+
+            <span id="spanText"></span>
+
+           
+        </div>
+
+    
+                <br>
+        
+    </body>
+</html>
+
+<script>
+    
+
+function nadando(){ 
+    spanText.innerHTML = 'R$:' + ipt_6meses.value + '<br> <img style="width:200px;" src="https://osegredo.com.br/wp-content/uploads/2015/09/dinehiro.jpg"></span>' + '<br>' +
+    
+    'R$:' + ipt_3anos.value + ' <br> <img style="width:200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK2vLcny2X7XPUChb2IKKsIKME0X5A_Ssn5A&usqp=CAU">'
+    ;
+}
+
+
+
+
+</script>   

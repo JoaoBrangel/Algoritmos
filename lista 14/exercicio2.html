@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="iqt_qtde" type="range" min="0" max="100" onchange="ipt()">
+<br>
+    <span id="span_frases"><br></span>
+    <br>
+    <br>
+</body>
+</html>
+<script>
+
+    function ipt(){
+
+var contador = 5; 
+        
+        while (contador < iqt_qtde.value) {
+            span_frases.innerHTML += `${contador}<br>`;
+            contador++;
+        }
+    }
+</script>     

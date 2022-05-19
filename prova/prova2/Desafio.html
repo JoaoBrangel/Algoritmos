@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio</title>
+  </head>
+  <body>
+      <center>
+      
+    <div id="div1" style="display: block">
+        <h1>Bem vindo a loja do joao</h1>
+      por favor como está o estoque de morango?
+      <br>
+      Digite a quantidade de caixas no estoque
+      <br>
+      <!--Receba a quantidade de caixas de morangos que foram colhidos e serão vendidos.-->
+      <input id="Morango_estoque" />
+      <!--Quando o botão “Abrir as Vendas” for clicado validar as quantidades da seguinte forma:-->
+      <button onclick="vendas()">Abrir as Vendas</button>`
+      <span id="spantxt"></span>
+    </div>
+
+
+
+
+    <div id="div2" style="display: none">
+     Informe a quantidade de caixas de morango Vendida
+     
+     <br>
+             <input id="Quantidade_vendida"></input>
+            <br><br>
+    <br>
+    Quanto você acha que vale a caixa de morango?
+    <br>
+    <input id="opniao_venda">
+    <br><br>
+   
+        <Span id="spanvalor"></Span>
+      <br>
+      <button onclick="Validar_venda()">Registrar a compra</button>
+
+      <button onclick="Registrar()">Registrar a Venda</button>
+    </div>
+<span id="saldo"></span>
+</center>
+  </body>
+</html>
+<script>
+    var quantidade = 0
+      var Morango = 0
+      var venda = 0
+    
+      function vendas(){
+        Morango = Number(Morango_estoque.value)
+
+          if (Morango < 100) {
+              alert (`Com esse volume de Morangos não dá para abrir as vendas`);
+          } else if  (Morango > 2000 ){
+              alert (`Tudo isso!!!`)
+              div1.style.display = "none"
+              div2.style.display = "block"
+          }else {
+              div1.style.display = "none"
+              div2.style.display = "block"
+              
+          }
+      }
+
+      function Validar_venda(){
+        quantidade = Number (Quantidade_vendida.value);
+        Morango = Number(Morango_estoque.value)
+        var opniao = opniao_venda.value
+
+        if (quantidade < 20 && opniao == 5.50 || opniao == 6) {
+            spanvalor.innerHTML = `preço ok`
+        } else if (quantidade >= 20 || quantidade < 40 && opniao == 5 || opniao == 4.50) {
+            spanvalor.innerHTML = `preço ok`
+        }else if (quantidade >= 20 || quantidade < 40 && opniao == 5 || opniao == 4.50) {
+            spanvalor.innerHTML = `preço ok`
+        }else{
+            spanvalor.innerHTML = `preço errado porfavor coloque o preço correto`
+        }         
+
+    
+
+        
+}
+    function Registrar(){
+      
+       venda = Number(Morango - Quantidade_vendida.value)
+       var valorVendido = venda;
+       Morango = Number(Morango_estoque.value)
+
+  saldo.innerHTML = `Com a venda de ${quantidade} de caixas de Morango o saldo no restante é de ${valorVendido}<br><br>`
+  saldo.innerHTML +=`${quantidade} é a quantidade de produto vendido`
+    }
+        
+
+      
+</script>

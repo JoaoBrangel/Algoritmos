@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercearia</title>
+</head>
+<body>
+    <center>
+
+        <h3>Lista Mercearia</h3>
+    <select id="slt_Combo">
+        <option value="">Combos</option>
+        <option value="27">Hamburgão do João</option>
+        <option value="12">Podrao do José</option>
+        <option value="22">Baião do Farias</option>
+      </select>
+
+      <button onclick="humor()">ver preço</button>
+      
+    </center>
+</body>
+</html>
+<script>
+
+function humor(){
+    var Combos = Number( slt_Combo.value);
+    alert ( `Isso custa R$${Combos.toFixed(2)}` )
+}
+</script>

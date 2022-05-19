@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>tio patias</title>
+</head>
+<body>
+    
+    <span id="dinheiro"></span>
+    <span id="deposito"></span>
+
+<button onclick="bt_cinq()">cinquenta</button>
+<button onclick="bt_dois()">dois</button>
+
+<span id="spanhtml"></span>
+<span id="spanhtml2"></span>
+</body>
+</html>
+<script>
+
+var money = 0;
+var depo = 0;
+spanhtml.innerHTML = `vctem ${money.toFixed(2)}`
+spanhtml2.innerHTML = `mais ${money.toFixed(0)}`
+
+    function bt_cinq(){
+    money = money + 0.50;
+    depo ++;
+        spanhtml.innerHTML =`voce tem ${money} ` ;
+        spanhtml2.innerHTML =`você depositor ${depo}`
+    }
+    function bt_dois(){
+        money = money + 2.00;
+        depo ++;
+        spanhtml.innerHTML =`voce tem ${money} ` ;
+        spanhtml2.innerHTML =`você depositor ${depo}`
+    }
+
+
+</script>

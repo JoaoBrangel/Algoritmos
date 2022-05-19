@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio01</title>
+</head>
+
+<body>
+    <h3>João Junior come essa fruta?</h3>
+
+    <input id="fruta" placeholder="Digite a fruta que você quer comer">
+    <button onclick="bt_comer()">Vai comer?</button>
+    <span id="spantxt"></span>
+</body>
+
+</html>
+<script>
+
+    function bt_comer() {
+
+        var jl_fruta = fruta.value
+
+        if (jl_fruta == 'maça' || jl_fruta == 'uva') {
+            alert(`Sim, vai comer ${jl_fruta}`)
+        } else {
+            alert(`A fruta ${jl_fruta} ela não come`)
+        }
+    }
+</script>

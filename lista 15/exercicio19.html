@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio19 || lista 15</title>
+</head>
+
+<body>
+    <center>
+    <h1>Digite a sua idade</h1>
+    <input id="ipt_idade" placeholder="Digite sua idade" onchange="ipt()">
+    <div id="spantxt"></div>
+</center>
+
+</body>
+</html>
+<script>
+    function ipt() {
+        var idade = Number(ipt_idade.value);
+
+        for (contador = 0; contador < idade; contador++) {
+            if (contador < 4) {
+                spantxt.innerHTML += `Primeira Infância ${contador}<br>`;
+            } 
+            else if (contador < 6) {
+                spantxt.innerHTML += `Pré-escolar${contador} <br>`;
+            }
+             else if (contador < 10) {
+                spantxt.innerHTML += `Segunda Infância ${contador}<br>`;
+            } 
+            else if (contador < 18) {
+                spantxt.innerHTML += `Adolescência${contador} <br>`;
+            } 
+            else if (contador < 50) {
+                spantxt.innerHTML += `Adulto${contador} <br>`;
+            }
+             else if (contador < 99) {
+                spantxt.innerHTML += `Melhor idade${contador} <br>`;
+            } 
+            else {
+                spantxt.innerHTML += `Matusalém ${contador}<br>`;
+            }
+
+        }
+    }
+
+</script>

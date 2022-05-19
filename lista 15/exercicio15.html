@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15 || lista 15</title>
+</head>
+
+<body>
+
+    <center>
+    <h1>Banco do joão</h1>
+
+    <p>Digite a quantidade de depositos</p>
+
+    <input id="ipt_deposito" placeholder="Digite aqui a quantidade "><br>
+
+    <p>Digite o valor dos depósitos </p>
+
+    <input id="ipt_quantidade" placeholder="Digite aqui o valor ">
+    <br>
+    <br>
+
+    <button onclick="bt()">Acompanhar grana</button>
+    <br>
+    <br>
+    <div id="spantxt"></div>
+    <div id="spantxt2"></div>
+    
+</center>
+
+</body>
+</html>
+<script>
+      function bt() {
+
+        var deposito = Number(ipt_deposito.value);
+        var quantidade = Number(ipt_quantidade.value);
+
+        spantxt.innerHTML = ``;
+
+        for (var i = 2; i <= deposito + 1; i++) {
+
+            if (i % 3 == 0) {
+
+                spantxt.innerHTML += `${i - 1}º Mês: R$ ${quantidade.toFixed(2)}<br>`;
+                quantidade = quantidade + Number(ipt_quantidade.value);
+
+                spantxt2.innerHTML = `Total acumulado: R$ ${(quantidade - Number(ipt_quantidade.value)).toFixed(2)}`;
+                quantidade = quantidade * 1.01;
+
+            }
+            else if (i % 3 != 0) {
+
+                spantxt.innerHTML += `${i - 1}º Mês: R$ ${quantidade.toFixed(2)}<br>`;
+                quantidade = quantidade + Number(ipt_quantidade.value);
+                
+                spantxt2.innerHTML = `Total acumulado: R$ ${(quantidade - Number(ipt_quantidade.value)).toFixed(2)}`;
+
+            }
+        }
+    }
+
+
+
+</script>

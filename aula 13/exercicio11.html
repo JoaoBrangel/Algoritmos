@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EXERCICIO 11 - LISTA 5 </title>
+</head>
+
+<body>
+
+
+    <center>
+        <div style="background-color: rgba(15, 15, 15, 0.356); height: 400px; width: 300px; border-radius: 10px; ">
+        <h2 style="color: rgb(225, 228, 37)"> COFRINHO DE MOEDAS  </h2>
+
+        <select style="border-radius: 5px;" id="slt_deposito">
+            <option value="0.05">5 CENTAVOS</option>
+            <option value="0.10">10 CENTAVOS</option>
+            <option value="0.25">25 CENTAVOS</option>
+            <option value="0.50">50 CENTAVOS</option>
+            <option value="1">1 REAL</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="depositar()" style="background-color: green; color: white; width: 100px; border-radius: 7px;"> DEPOSITAR </button> 
+
+        <button onclick="gastar()" style="background-color: red;color: white;width: 100px; border-radius: 7px"> GASTAR </button>
+
+
+        <div class="texto">
+      
+            <span id="span_saldo">Saldo atual:</span> <br>
+            <br>
+            <span id="span_contador"></span> <br>
+            
+            <span id="span_media"></span> <br>
+
+        </div>
+    </center>
+
+</body>
+
+</html>
+<script>
+
+    var jl_saldo = 0;
+    var jl_contador = 0;
+
+    function depositar() {
+        jl_contador++;
+        jl_saldo = jl_saldo + Number(slt_deposito.value);
+        var media = (jl_saldo / jl_contador)
+
+        span_saldo.innerHTML = ` Saldo atual:   : ${jl_saldo.toFixed(2)}`
+        span_contador.innerHTML = `A QUANTIDADE DE OPERAÇÕES: ${jl_contador}`
+        span_media.innerHTML = `MEDIA DOS DEPOSITOS:${media.toFixed(2)}`
+    }
+    
+        function gastar() {
+        jl_contador++;
+        jl_saldo = jl_saldo - Number(slt_deposito.value);
+        var media = (jl_saldo / jl_contador)
+
+        span_saldo.innerHTML = `Saldo atual: ${jl_saldo.toFixed(2)}`
+        span_contador.innerHTML = `A QUANTIDADE DE OPERAÇÕES: ${jl_contador}`
+        span_media.innerHTML = `MEDIA DOS DEPOSITOS:${media.toFixed(2)}`
+    }
+
+    
+</script>

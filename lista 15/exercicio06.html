@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 06 || lista 15</title>
+</head>
+<body>
+    <input id="ipt_number"placeholder="Digite um numero">
+    <br>
+    <input id="ipt_frase" placeholder="Digite uma frase">
+    <br>
+    <button onclick="bt()">Papagaio</button>
+    <br>
+    <span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    function bt(){
+
+        var valor = Number(ipt_number.value)
+        var frase = ipt_frase.value
+
+        for (contador = 1; contador <= valor; contador++) {
+            alert (`${frase}`)
+            
+        }
+    }
+
+</script>

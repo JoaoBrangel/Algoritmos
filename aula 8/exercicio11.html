@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Exercicio 07</title>
+</head>
+
+    <body>
+
+
+        <h1>Calculo de IMC </h1>
+
+        Digite o peso
+        <br>
+        <input id="peso" placeholder="Digite o peso"> <br><br>
+         Digite a altura
+         <br>
+        <input id="altura" placeholder="Digite a altura"> <br><br>
+
+        <br>
+        <button onclick="homem()">IMC do Homem</button>
+        <button onclick="mulher()">IMC da Mulher</button>
+
+        <span id="spanText"></span>
+     </body>
+     </html>
+
+     <script> 
+
+     function homem() {
+        spanText.innerHTML = `Seu IMC é isso aqui cara:  ${  peso.value / (altura.value * altura.value) }`
+     }
+     function mulher() {
+        spanText.innerHTML = `Seu IMC é isso aqui moça:  ${  peso.value / (altura.value * altura.value)  * 0.9 }`     }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+<div style="background-color: darkgrey; width: 20%;height: 300px;" class="pai">
+    
+                                        <!-- inputs---------------->
+                                        <br>
+    <div class="1aba">   
+        <center>                                 
+    <input style="width: 80%; height: 20px;" id="ipt_valor" type="text">
+    <br>
+    <input style="width: 80%; height: 20px;" id="ipt_segundo" type="text">
+        </center> 
+</div>
+                                <!-- inputs---------------->
+                             
+    <br>        
+    
+        <span style="background-color: white;" id="spanText"></span>
+    
+    <button style="width: 20%; height: 40px; " onclick="limpar()">C</button>
+
+                                         <!-- botões--------------->
+    <br>
+    <center>
+    <button style= "width:80%;" onclick="multiplicação()">multiplicação </button>
+    <br>
+    <button style= "width:80%;" onclick="subtração()">subtração </button>
+    <br>
+    <button style= "width:80%;" onclick="adição()">adição</button>
+    <br>
+    <button style= "width:80%;" onclick="divisão()">divisão </button>
+    </center>
+                                        <!-- botões---------------->
+
+
+    
+
+</div>
+   
+</body>
+</html>
+<script>
+    
+    var mult
+    var segundovalor
+
+    function multiplicação()
+    {
+     mult = Number (ipt_valor.value);
+     segundovalor = Number (ipt_segundo.value)
+    resul = mult * segundovalor
+    spanText.innerHTML =`${resul}`; 
+    ipt_valor.value = resul
+}
+function subtração()
+    {
+     mult = Number (ipt_valor.value);
+     segundovalor = Number (ipt_segundo.value)
+    resul = mult - segundovalor
+    spanText.innerHTML =`${resul}`; 
+    ipt_valor.value = resul
+}
+function adição()
+    {
+     mult = Number (ipt_valor.value);
+     segundovalor = Number (ipt_segundo.value)
+    resul = mult + segundovalor
+    spanText.innerHTML =`${resul}`; 
+    ipt_valor.value = resul
+}
+function divisão()
+    {
+     mult = Number (ipt_valor.value);
+     segundovalor = Number (ipt_segundo.value)
+    resul = mult / segundovalor
+    spanText.innerHTML =`${resul} `; 
+    ipt_valor.value = resul
+    
+}
+function limpar(){
+    var limpa = '';
+    spanText.innerHTML = "<span></span>";
+    ipt_valor.value = limpa;
+    ipt_segundo.value = limpa
+
+}
+</script>

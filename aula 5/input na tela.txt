@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>input</title>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    
+    <h2>TAG INPUT</h2>
+    <br>    
+
+        Dgite sua cidade natal<br>
+        <input style="border-radius: 5px; width: 200px;" id="ipt_cidade" type="text" placeholder="Digite sua cidade natal">
+        <br><br>
+
+        Digite sua Data de nascimento<br>
+        <input style="border-radius: 5px; width: 200px; " id="ipt_ano" type="text" placeholder="00/00/0000">
+        <br><br>
+
+        <button style="width: 200px;" onclick="mostrar()">enviar</button>
+        <br><br>
+        
+        <span id="spanText"></span>
+
+    
+</body>
+</html>
+<script>
+  function mostrar (){
+    
+        spanText.innerHTML = '<b>Cidade natal: </b>' + ipt_cidade.value + '<br>' +  ' <b>data de nascimento:</b> '
+     + ipt_ano.value ;
+	spanText.value ='';
+    
+  }
+
+</script>

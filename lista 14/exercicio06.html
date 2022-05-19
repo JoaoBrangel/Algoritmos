@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio06 || lista 14</title>
+</head>
+<body>
+    <center>
+    digite o nome da pessoa que vc mais ama
+    <br>
+    <input id="ipt_amor">
+    <br>
+    quanto você o ama? digite um numero inteiro
+    <br>
+    <input id="ipt_quantidade">
+<br>
+    <button onclick="btm_menu()">Expressar amor</button>
+<br>
+    <span id="spantxt"></span>
+</center>
+</body>
+</html>
+<script>
+
+    function btm_menu(){
+        
+        var NomePessoa = ipt_amor.value;
+        var quantidade = 1
+
+        
+        while (quantidade <= Number(ipt_quantidade.value) ) {
+            spantxt.innerHTML += `${NomePessoa}, eu te amo! Sempre lembre disso!<br>`
+            quantidade ++;
+        }
+        
+
+    }
+
+</script>

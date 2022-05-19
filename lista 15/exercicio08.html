@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08 || lista 15</title>
+</head>
+<body>
+    
+    <input id="ipt_limite1" placeholder="Fale o limite 1">
+    <br>
+    <input id="ipt_limite2" placeholder="Fale o limite 2">
+    <button onclick="bt()">Contar</button>
+    <br>
+    <span id="spantxt"></span>
+    <br>
+</body>
+</html>
+<script>
+
+    function bt(){
+
+        var limite1 = Number(ipt_limite1.value);
+        var limite2 = Number(ipt_limite2.value);
+
+        if (limite1 < 1 || limite2 >100) {
+            alert (`Colque o valor certo`)
+        } else {
+            for ( contador = limite1; contador <= limite2; contador++) {
+                spantxt.innerHTML += `${contador}<br>`
+                
+            }
+        }
+    }
+</script>

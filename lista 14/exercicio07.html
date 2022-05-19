@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <input id="ipt_valor" placeholder="Informe o valor">
+    <br>
+    <button onclick="bt()">Adoro múltiplos de 5</button>
+    <br>
+    <span id="spantxt"></span>
+</center>
+</body>
+</html>
+<script>
+
+ function bt(){
+
+    var contador = 0;
+    var numero = Number(ipt_valor.value)
+
+    if (numero < 20 || numero >100 ) {
+        alert (`Digite um valor entre 20 e 100`)
+    } else {
+        
+        while (contador <= numero ) {
+            
+            spantxt.innerHTML += `${contador}<br>`
+
+            contador++,contador++,contador++,contador++,contador++
+        }
+    }
+}
+</script>

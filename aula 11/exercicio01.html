@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Digite sua tabuada</h3>
+
+    <input id="ipt_valor", placeholder="valor">
+    
+    <br>
+    <button style="width: 177px;" onclick="tabuada()">tabuada</button>
+
+    <br><br>
+
+    <span id="conta"></span>
+
+
+</body>
+</html>
+<script>
+
+
+    function tabuada(){
+    
+    var valor = Number(ipt_valor.value);
+    var valor1 = valor * 1;
+    var valor2 = valor * 2;
+    var valor3 = valor * 3;
+    var valor4 = valor * 4;
+    var valor5 = valor * 5;
+    var valor6 = valor * 6;
+    var valor7 = valor * 7;
+    var valor8 = valor * 8;
+    var valor9 = valor * 9;
+
+
+   conta.innerHTML = `o usuário digitou ${valor}, sua tabuada é: ${valor1}<br> ${valor2}<br> ${valor3}<br>
+                                                                 ${valor4}<br> ${valor5}<br> ${valor6}<br>
+                                                                 ${valor7}<br> ${valor8}<br> ${valor9}<br>`
+    }
+
+
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Exercicio 07</title>
+</head>
+
+    <body>
+
+
+        <h1>Calculo de IMC </h1>
+
+        Digite o peso
+        <br>
+        <input id="peso" placeholder="Digite o peso"> <br><br>
+         Digite a altura
+         <br>
+        <input id="altura" placeholder="Digite a altura"> <br><br>
+
+        <br>
+        <button onclick="homem()">IMC do Homem</button>
+        <button onclick="mulher()">IMC da Mulher</button>
+
+        <span id="spanText"></span>
+     </body>
+     </html>
+
+     <script> 
+
+
+     function homem() {
+            var homenPe = Number (peso.value);
+            var homenAl = Number (altura.value);
+             xy = homenPe / (homenAl **2);
+             xy = xy*0.9
+
+        spanText.innerHTML = ` Seu IMC é isso aqui cara: ${xy.toFixed(1)}`;
+     }
+     function mulher() {
+            var mulherPe = Number (peso.value);
+            var mulherAl = Number (altura.value);
+             xy = mulherPe / (mulherAl **2);
+             xy = xy*0.9
+
+        spanText.innerHTML = ` Seu IMC é isso aqui cara: ${xy.toFixed(1)}`;
+     }
+     </script>

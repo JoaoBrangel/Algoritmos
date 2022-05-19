@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>triatleta</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>O que faz um triatleta?</h1>
+
+            <div style="background-color:dimgrey; width:58%; height: 400px; border-radius: 20px;">
+          
+
+                    <br>    
+                    <button style="border-radius: 5px; width: 260px;" onclick="nadando();">nada</button>
+                    <button style="border-radius: 5px; width: 260px;" onclick="corre();">corre</button>
+                    <br>  <br>  
+
+                        <img id="img_data" src="nadando.jpg" alt="" style="height: 200px; display: none;">
+                        <img id="img_corre" src="bike.jpg" alt="" style="height: 200px; display: none;">           
+                        <br> 
+                    </div>
+    
+                <br>
+        </Center>
+        <!-- none invisivel-->
+        <!-- block visivel -->
+    </body>
+</html>
+
+<script>
+    function nadando(){
+        img_data.style.display = 'block';
+        img_corre.style.display = 'none';
+    }
+    function corre(){
+        img_corre.style.display = 'block';
+        img_data.style.display = 'none';
+        
+    }
+</script>   

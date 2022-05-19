@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 19 || lista 15</title>
+</head>
+<body>
+    <input id="qtd_busao" placeholder="quantidade de onibus">
+    <br>
+    <input id="qtd_trem" placeholder="Quantidade de trens">
+    <br>
+    <input id="qtd_metros" placeholder="Quantidade metros">
+    <br>
+    <button onclick="bt()">#Partiu Trajeto</button>
+    <br>
+    <span id="spantxt" ></span>
+</body>
+</html>
+<script>
+
+    function bt(){
+        var busao = Number(qtd_busao.value);
+        var trem = Number(qtd_trem.value);
+        var metros = Number(qtd_metros.value);
+
+        contador1 = 0;
+        contador2 = 0;
+        contador3 = 0;
+
+        while (contador1 <= busao) {
+            spantxt.innerHTML +=` <span style=" color: red;"> Pegando ${contador1}° Busão </span><br>`
+            contador1 ++
+        }
+        while (contador2 <= trem) {
+            spantxt.innerHTML +=`<span style=" color: green;"> Pegando ${contador2}° Trem </span><br>`
+            contador2 ++
+        }
+        while (contador3 <= metros) {
+            spantxt.innerHTML +=`<span style=" color: blue ;"> Pegando ${contador3}° Metrô </span><br> `
+            contador3 ++
+        }
+
+        
+        
+       
+    }
+
+</script>

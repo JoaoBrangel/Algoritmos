@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio04 - lista 14</title>
+</head>
+<body>
+<center>
+    <h1> clique no botão</h1>
+    <button onclick="button100()">S2 pares</button>
+
+    <span id="spantxt"></span>
+</center>
+</body>
+</html>
+<script>
+
+    function button100(){
+        
+        var pares = 1
+
+        while (pares <= 100) {
+            if (pares %2 == 0) {
+                spantxt.innerHTML += `<br>${pares}`
+            }
+            pares ++;
+        }
+
+
+    }
+ 
+</script>

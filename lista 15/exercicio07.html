@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 07 || lista 15</title>
+</head>
+<body>
+    
+    <input id="ipt_valor">
+    
+    <br>
+    <button onclick="bt()">Contar</button>
+    <br>
+    <span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    function bt(){
+        
+        var valor = Number(ipt_valor.value)
+        
+
+       if (valor >= 100) {
+           alert (`Por favor coloque um valor correto`)
+       } else {
+           for (contador = 5; contador <= valor; contador++) {
+               spantxt.innerHTML += `${contador}<br>`
+               
+           }
+       }
+    }
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consistências</title>
+</head>
+<body>
+    
+    <select id="estados">
+        <option value="1">--Selecionar—</option>
+        <option value="2">SP – Capital</option>
+        <option value="3">SP – Interior</option>
+        <option value="4">Outros Estados</option>
+    </select>
+
+<button onclick="bt_local()">Falar do Local</button>
+<br><br>
+<img id="spanimg" src="" style="height: 150px;">
+<br><br>
+<span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+
+    function bt_local(){
+
+        var jl_estados = estados.value
+
+        if (jl_estados ==1 ) {
+            spantxt.innerHTML= ``;
+            alert (`Favor escolher uma opção`)
+            spanimg.src = ""
+            
+            
+        } else if (jl_estados ==2){
+            spantxt.innerHTML = `Os nascidos nesta cidade são Paulistanos`;
+            spanimg.src = "https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/303442/cb37a25bd572aaa498e6deb90b35eb97sp/0,0,1280,958/full,0.29/0/default.jpeg"
+        }else if (jl_estados ==3) {
+            spantxt.innerHTML = `Os nascidos neste estado são Paulistas`;
+            spanimg.src = "https://f.i.uol.com.br/fotografia/2020/10/21/16033292145f90dcbe0aab3_1603329214_3x2_md.jpg";
+        } else {
+            spantxt.innerHTML = `Os nascidos neste lugar não são Paulistanos e nem Paulistas`;
+            spanimg.src = "https://cdn.astrocentro.com.br/blog/wp-content/uploads/2017/10/18191727/baianos-na-umbanda.jpg";
+        }
+        
+        
+    }
+
+</script>
+
+
+
+spanimg.src ="https://i.pinimg.com/550x/33/4d/42/334d425ebe7b8134d7c83170522b7816.jpg"

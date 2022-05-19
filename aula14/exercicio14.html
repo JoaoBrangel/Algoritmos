@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notas de um aluno</title>
+</head>
+<body>
+    <Center>
+        <h3>nota</h3>
+    <input placeholder="Digite sua primeira nota" id="ipt_nota">
+    <input placeholder="Digite sua segunda nota" id="ipt_nota2">
+
+    <button onclick="bt_calcular()">Verificar situação</button>
+</Center>
+</body>
+</html>
+<script>
+    function bt_calcular(){
+       var nota1 = Number(ipt_nota.value);
+       var nota2 = Number(ipt_nota2.value);
+        console.log(nota1);
+        console.log(nota2);
+        var jl_calculo = (nota1 + nota2) /2;
+
+        if (jl_calculo > 6) {
+            alert(`Parabéns, aprovado`)
+        }
+        alert(`Tente outra vez...`)
+       
+    }
+
+</script>

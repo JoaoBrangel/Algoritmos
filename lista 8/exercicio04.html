@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-4</title>
+</head>
+
+<body>
+    <h3>Obesidade?</h3>
+    <input id="ipt_peso" placeholder="Digite seu peso">
+
+    <button onclick="bt_resultado()">Enviar</button>
+    <span id="spantxt"></span>
+</body>
+
+</html>
+<script>
+
+    function bt_resultado() {
+        var jl_peso = Number(ipt_peso.value)
+
+        if (jl_peso == 18.3) {
+            spantxt.innerHTML = `Peso perfeito`;
+        } else if (jl_peso >= 13.5 && jl_peso <= 21.2) { 
+            spantxt.innerHTML = `Peso na média`;
+        } else if (jl_peso >= 21.2) {
+            spantxt.innerHTML = `Acima do peso`;
+        } else {
+            spantxt.innerHTML = `Abaixo do peso `;
+        }
+
+
+
+    }
+
+</script>

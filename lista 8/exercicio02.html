@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio-2 lista 8</title>
+</head>
+<body>
+
+    <h3>classe social</h3>
+
+    <input id="ipt_renda" placeholder="Digite sua Renda mensal">
+    <button onclick="bt_verificar()">Analisar Renda</button>
+    <span id="spantxt"></span>
+</body>
+</html>
+<script>
+    function bt_verificar(){
+        var jl_renda = Number(ipt_renda.value);
+
+        if (jl_renda <= 250) {
+            spantxt.innerHTML = `Classe E`;
+        } else if (jl_renda <= 900) {
+                    spantxt.innerHTML = `Classe D`;
+                } else if (jl_renda <= 2500) {
+                        spantxt.innerHTML = `Classe C`;
+                    } else if (jl_renda <= 9500) {
+                            spantxt.innerHTML = `Classe B`
+                        } else {
+                            spantxt.innerHTML = `Classe A`
+                        }
+                    
+                
+            
+        }
+    
+
+</script>

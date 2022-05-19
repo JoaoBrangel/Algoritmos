@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="ipt_idade" placeholder="Idade">
+    
+        <br><br>
+
+    <button onclick="homen()">Homen</button>
+    <button onclick="mulher()">Mulher</button>
+</body>
+</html>
+<script>
+
+    function homen(){
+        alert(`faltam ${70 + ipt_idade.value} anos para você aposentar`);
+    }
+    function mulher(){
+        alert(`faltam ${60 + Number(ipt_idade.value)} anos para você aposentar`);
+        }
+
+</script>

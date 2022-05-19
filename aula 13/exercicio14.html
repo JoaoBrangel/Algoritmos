@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 14 </title>
+</head>
+
+<body>
+ 
+    <center>
+        <h1> INCREMENTE A SUA PIZZA!</h1>
+        <select id="slt_pizza">
+            <option value="23.00">MUÇARELA</option>
+            <option value="24.00">CALABRESA</option>
+            <option value="26.00">ATUM</option>
+            <option value="30.00">PORTUGUESA</option>
+        </select>
+        <br><br>
+
+        <h4>ESCOLHA O PRIMEIRO INCREMENTO</h4>
+        <select id="slt_um">
+            <option value="2.00">QUEIJO</option>
+            <option value="2.50">PRESUNTO</option>
+            <option value="1.50">OVO</option>
+            <option value="4.00">PALMITO</option>
+            <option value="3.50">FRANGO</option>
+            <option value="3.00">CATUPIRY</option>
+        </select>
+        <br><br>
+
+        <h4>ESCOLHA O PRIMEIRO INCREMENTO</h4>
+        <select id="slt_dois">
+            <option value="2.00">QUEIJO</option>
+            <option value="2.50">PRESUNTO</option>
+            <option value="1.50">OVO</option>
+            <option value="4.00">PALMITO</option>
+            <option value="3.50">FRANGO</option>
+            <option value="3.00">CATUPIRY</option>
+        </select>
+        <br><br>
+
+        <h4>ESCOLHA O PRIMEIRO INCREMENTO</h4>
+        <select id="slt_tres">
+            <option value="2.00">QUEIJO</option>
+            <option value="2.50">PRESUNTO</option>
+            <option value="1.50">OVO</option>
+            <option value="4.00">PALMITO</option>
+            <option value="3.50">FRANGO</option>
+            <option value="3.00">CATUPIRY</option>
+        </select>
+        <br><br>
+
+
+        <button onclick="calcular()">CALCULAR PREÇO DA PIZZA</button>
+        <br><br>
+        <span id="spanText"></span>
+
+
+
+
+    </center>
+</body>
+
+</html>
+<script>
+
+    function calcular() {
+        var pizza = Number(slt_pizza.value)
+        var um =    Number(slt_um.value)
+        var dois =  Number(slt_dois.value)
+        var tres =  Number(slt_tres.value)
+
+        spanText.innerHTML = `<b style="color: red;"> A pizza era R$ ${pizza.toFixed(2)},
+             mas foi acrescido R$ ${um.toFixed(2)}
+             do 1º incremento,
+    R$ ${dois.toFixed(2)} do 2º incremento e R$ ${tres.toFixed(2)} do 3º incremento. 
+    <br> E custará um total de R$ ${pizza + um + dois + tres} </b> `
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

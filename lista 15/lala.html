@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digite o valor</h1>
+    <br>
+
+    <input id="ipt_valor">
+
+    <button onclick="bt_Registro()">Registar</button>
+    <button onclick="bt_encerrar()">Encerrar</button>
+    <span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    var maior = 14;
+    var media = 0;
+    var menor = 23;
+    
+
+function bt_Registro(){
+
+    bt_Registro ++
+
+    var valor = Number(bt_Registro.value)
+
+    if (valor < 15 && valor > 23) {
+        alert  (`Numero invalido, coloque entre 15 e 23`)
+    }else{
+
+        for (contador = 0; contador < array.length; contador++) {
+            spantxt.innerHTML += `${contador}`
+            
+        }
+
+
+    }
+
+
+
+
+}
+
+</script>

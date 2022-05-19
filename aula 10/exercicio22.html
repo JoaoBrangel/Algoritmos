@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Votos</title>
+</head>
+<body>
+    
+    <span id="dinheiro"></span>
+    <span id="deposito"></span>
+
+<button onclick="bt_praca()">Votar na Praça</button>
+<button onclick="bt_zorra()">Votar no zorra</button>
+
+<span id="spanhtml"></span>
+<span id="spanhtml2"></span>
+<span id="spanhtml3"></span>
+</body>
+</html>
+<script>
+
+var Praca = 0;
+var zorra = 0;
+var total = 0;
+spanhtml.innerHTML = `<br>Votos na praça é nossa ${Praca.toFixed(0)}<br>`
+
+spanhtml2.innerHTML = `Votos no Zorra Total ${Praca.toFixed(0)}`
+spanhtml3.innerHTML =`<br>total de votos ${total}`
+    function bt_praca(){
+        Praca = Praca + 1;
+    total ++;
+        spanhtml.innerHTML =`<br>voce tem ${Praca} <br>` ;
+        spanhtml3.innerHTML =`<br>total de votos ${total} <br>`
+    }
+    function bt_zorra(){
+        Praca = Praca + 1;
+        zorra ++;
+        total ++;
+        spanhtml2.innerHTML =`você depositor ${zorra}`
+        spanhtml3.innerHTML =`<br>total de votos ${total} <br>`
+    }
+
+
+</script>

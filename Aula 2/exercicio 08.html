@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>triatleta</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>O que faz um triatleta?</h1>
+
+            <div style="background-color:dimgrey; width:58%; height: 400px; border-radius: 20px;">
+                <br>
+                        
+                <button style="border-radius: 5px; width: 260px;float: left;" onclick="nadando();">nada</button>
+
+                    <button style="border-radius: 5px; width: 260px;float: left;" onclick="corre();">corre</button>
+                    
+                    <button style="border-radius: 5px; width: 260px;float: left;" onclick="bike();">pedala</button>
+                    <br>
+            
+                
+                             <br>           
+
+            <span id="spanText"></span>
+
+           
+        </div>
+
+    
+                <br>
+        </Center>
+    </body>
+</html>
+
+<script>
+    
+
+function nadando(){ 
+    spanText.innerHTML = '<br> <img style="width:200px;" src="nadando.jpg"></span>';
+}
+
+function corre(){ 
+    spanText.innerHTML = '<br><img style="width:200px;" src="corre.jpg"></span>';
+}
+
+function bike(){ 
+    spanText.innerHTML = '<br> <img style="width:200px;" src="bike.jpg"> </span>';
+}
+
+</script>   

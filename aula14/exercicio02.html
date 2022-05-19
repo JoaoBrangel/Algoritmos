@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>REFRI</title>
+</head>
+<body>
+    <center>
+        <h2>Refrigerantes por dia</h2>
+    <input id="ipt_quantidade" placeholder="latinhas">
+
+    <button onclick="bt_botao()">Refris tomados por dia</button>
+
+</center>
+</body>
+</html>
+<script>
+    
+    var jl_latinhas = 0
+    var jl_ano = 365
+function bt_botao(){
+
+
+    jl_latinhas = Number (ipt_quantidade.value);
+    var jl_resultado = jl_latinhas * jl_ano;
+
+    
+    if (jl_resultado > 500){
+        alert (`Você consome ${jl_resultado} Cuidado com a diabetes` )
+        
+}if(jl_resultado <= 500){
+    alert (`Pode beber tranquilo`)
+}
+
+}//function botao
+
+    
+
+</script>

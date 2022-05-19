@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>input</title>
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    
+    <h2>TAG INPUT</h2>
+    <br>    
+
+
+        Informe sua nota<br>
+        <input style="border-radius: 5px; width: 200px; " id="ipt_ano" type="text" placeholder="Nota da escola">
+        <br><br>
+
+        <button style="width: 200px;" onclick="mae()">Resposta mãe</button>
+        <br><br>
+
+        <button style="width: 200px;" onclick="vovo()">Resposta vó</button>
+        <br><br>
+        <span id="spanText"></span>
+
+    
+</body>
+</html>
+<script>
+  function mae (){
+    spanText.innerHTML = "Muito bem, não fez mais que tua obrigação com essa nota: " + '<span style="color:blue;">' + ipt_ano.value + '</span>' + "<br>"
+    spanText.value='';
+    
+  }
+  function vovo (){
+
+    spanText.innerHTML =  "Muito bom, que neto inteligente, porque tirou: " + '<span style="color:blue;">' + ipt_ano.value + '</span>' + "<br>"
+    spanText.value='';
+    
+  }
+
+</script>

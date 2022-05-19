@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXERCICIO 14 - LISTA 09</title>
+  </head>
+
+  <body>
+    
+      <h2>PROCESSO DE SELEÇÃO DE NOVOS ATLETAS</h2>
+
+
+      <h3>
+         Critério de Seleção de piloto –
+        <b style="background-color: red">altura entre 1,50 até 1,65</b>
+      </h3>
+
+
+      <h3>
+        Critério de Seleção de jogador de basquete –
+        <b style="background-color: red">altura entre 1.90 até 2.00</b>
+      </h3>
+
+
+      <br>
+
+      <input id="ipt_nome" placeholder="- Insira seu nome" />
+      <br/><br/>
+      <input id="ipt_altura" placeholder="- Insira sua altura" />
+
+      <br><br >
+
+      <select id="select_selecao" onchange="verificar()">
+        <option value="0">- Escolha uma seleção -</option>
+        <option value="1">Piloto</option>
+        <option value="2">Jogador de Basquete</option>
+      </select>
+
+      <br />
+      <div id="spantxt"><br /></div>
+  
+  </body>
+</html>
+
+<script>
+
+
+  var alt = 0;
+  var jl_nome = 0;
+  var jl_sel = 0;
+
+  function verificar() {
+    jl_alt = ipt_altura.value;
+    jl_nome = ipt_nome.value;
+    jl_sel = select_selecao.value;
+
+    {
+      if (jl_sel == 1) {
+        if (jl_alt >= 1.5 && alt <= 1.65) {
+            spantxt.innerHTML += `O candidato ${jl_nome} com altura de ${jl_alt} participará do processo de seleção de piloto <br>`;
+        } else {
+            spantxt.innerHTML += `Infelizmente o candidato ${jl_nome} com altura de ${jl_alt} não atende os requisitos <br>`;
+        }
+      }
+      if (jl_sel == 2) {
+        if (jl_alt >= 1.8 && alt <= 2.0) {
+            spantxt.innerHTML += `O candidato ${jl_nome} com altura de ${jl_alt} participará do processo de jogador de basquete <br>`;
+        } else {
+            spantxt.innerHTML += `Infelizmente o candidato ${jl_nome} com altura de ${jl_alt} não atende os requisitos <br>`;
+        }
+      }
+    }
+  }
+</script>

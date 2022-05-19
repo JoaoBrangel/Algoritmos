@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Script</title>
+</head>
+
+    <body>
+        <Center>
+
+        <h1>Exercicio 08</h1>
+
+            <div style="background-color:dimgrey; width: 400px; height: 100px; border-radius: 20px;">
+                <br>
+            
+                <button style="border-radius: 5px;" onclick="BEM()">Boas vindas no alerta</button>
+                <button style="border-radius: 5px" onclick="vermelho();">Boas vindas na página</button>
+                    
+                    
+                <br>
+            <span id="spanText"></span>
+        </div>
+                <br>
+        </Center>
+    </body>
+</html>
+
+<script>
+    
+
+function vermelho(){ 
+    spanText.innerHTML = '<br>  <b Style="background-color:black; color:yellow">Boas vinda ao site </b> </span>';
+}
+function BEM(){ 
+   alert('BEM VINDO!!')
+}
+</script>   

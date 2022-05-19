@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title> exercicio11 lita 6 </title>
+</head>
+
+<body>
+    
+    <center>
+        <h3> Qual o saldo da sua conta bancária? </h3>
+        <br>
+
+        <input id="ipt_saldo">
+
+        <button onclick="verificar()"> Verificar Finanças </button>
+        <br><br>
+
+        <span id="spantxt"></span>  
+    </center>
+</body>
+
+</html>
+<script>
+
+  function verificar() {
+
+        var jl_saldo = Number (ipt_saldo.value)
+
+        if (jl_saldo == 0) {
+            spantxt.innerHTML = `Conta zerada! `
+        }
+
+        if (jl_saldo < 0) {
+            spantxt.innerHTML = ` Está devendo!  `
+        }
+
+        if (jl_saldo > 0) {
+            spantxt.innerHTML = `Saldo positivo! `
+        }
+    }
+</script>

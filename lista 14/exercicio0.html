@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>emitir intervalo de X a Y</h1>
+
+    numero de entrada <br>
+    <input id="ipt_text"><br><br>
+
+    numero de saída <br>
+    <input id="ipt_text2"> 
+    
+    <button onclick="mostrar()">Mostrar</button>
+
+    <div id="divText"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrar() {
+        var contador = Number (0) 
+        var ax_inicio = Number(ipt_text.value)
+        var ax_final = Number(ipt_text2.value)
+
+        var result = contador + ax_inicio;
+        
+
+        divText.innerHTML = `Numeros do intervalo <br>`
+
+        while (result <= ax_final) {
+            if (result%2 == 0) {
+                
+                divText.innerHTML += `${result}<br>`
+            }
+            
+            
+            result ++
+        }
+
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>equipe ilantra</title>
+</head>
+<body>
+    
+    valor da passagem
+    <br>
+    <input id="ipt_passagem" placeholder="passagem">
+    <br><br>
+
+    Quantas viagem por mês?
+    <br>
+    <input id="ipt_viagem" placeholder="viagem">
+        <br><br>
+
+    <button onclick="economia()">Ver economia</button>
+    
+</body>
+</html>
+<script>
+
+    function economia(){
+        alert(` Você economizará R$ ${(ipt_passagem.value * ipt_viagem.value) / 2 }`);
+    }
+
+</script>

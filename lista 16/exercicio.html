@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01 || lista 16</title>
+</head>
+<body>
+    
+    <h1>Vetor</h1>
+    
+    Digite seu nome<br>
+    <input id="ipt_nome" placeholder="Digite seu nome"">
+
+    <button onclick="registrar()">Registrar</button>
+    <br>
+    <button onclick="mostrar()">mostrar</button>
+    <br>
+<span id="spantxt"></span>
+</body>
+</html>
+<script>
+
+    
+    var vtr_nome = [];
+
+    function registrar(){
+
+        vtr_nome.push(ipt_nome.value); 
+        ipt_nome.value = "";
+    }
+function mostrar(){
+    spantxt.innerHTML = `o vetorzin esta assim ${vtr_nome}<br>`;
+    spantxt.innerHTML += `a quantidade ${vtr_nome.length} <br>`; 
+    spantxt.innerHTML += `A Primeira ocorrência é: ${vtr_nome[0]}<br>`;
+    spantxt.innerHTML += `A Terceira ocorrência é: ${vtr_nome[2]}<br>`;           
+    spantxt.innerHTML += `A Última ocorrência é: ${vtr_nome[vtr_nome.length-1]}<br><br><br>`;
+
+    for (var index = 0; index < vtr_nome.length; index++) {
+        spantxt.innerHTML += `A ${index+1}ª ocorrência é: ${vtr_nome[index]}<br>`;         
+        }
+}
+
+</script>

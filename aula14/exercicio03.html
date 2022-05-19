@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Desempenho</h3>
+    <input id="nota1">
+    <input id="nota2">
+    <input id="nota3">
+
+    <button onclick="bt_media()">Analisar desempenho</button>
+    
+    <div id="resultado_media"></div>
+</body>
+</html>
+<script>
+
+var jl_nota1 = 0
+var jl_nota2 = 0
+var jl_nota3 = 0
+
+function bt_media(){
+
+var jl_nota1 = Number (nota1.value)
+var jl_nota2 = Number (nota2.value)
+var jl_nota3 = Number (nota3.value)
+    
+var jl_media_nota = jl_nota1 + jl_nota2 + jl_nota3 / 3;
+        if (jl_media_nota > 9.4) {
+            alert ('fora de série')
+        }if (jl_media_nota <9.4 ) {
+            alert (`ta na média`)
+        }if (jl_media_nota <=5 ) {
+            alert (`ta ruim`)
+        }
+       
+}//bt_media--------
+
+</script>
